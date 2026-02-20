@@ -1,0 +1,28 @@
+body {
+  color: #949087;
+  font-family: sans-serif;
+  background: #faf6ed url("../images/bg.png");
+}
+
+/* header */
+header {
+  max-width: 1000px;
+  margin: 2.5rem auto 0;
+  background: url("../images/header.svg") no-repeat center top/cover;
+  height: 170px;
+}
+
+.page-title {
+  font-size: 3.75rem;
+  font-family: "Amatic SC", cursive;
+  margin: 1rem 0;
+  padding-top: 2rem;
+}
+.page-desc {
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+.page-title,
+.page-desc {
+  text-align: center;
+}
