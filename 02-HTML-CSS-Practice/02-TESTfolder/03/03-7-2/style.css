@@ -1,0 +1,56 @@
+body {
+  font-family: sans-serif;
+}
+
+/* main */
+.main-menu {
+  display: flex;
+  justify-content: center;
+}
+
+.main-menu a {
+  background: #0bd;
+  padding: 1rem;
+  color: #fff;
+  display: inline-block;
+  margin: 1rem;
+}
+
+.main-menu a:hover {
+  background: #0090aa;
+}
+
+/* sub */
+.sub-menu {
+  position: absolute;
+  top: 4.5rem;
+  left: 1rem;
+}
+
+.sub-menu a {
+  margin: 1px;
+  width: 180px;
+  background: #666;
+}
+
+/* sub-menu */
+.has-menu {
+  position: relative;
+}
+
+.has-menu > a::after {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  content: "\f078";
+  margin-left: 0.5rem;
+}
+
+/* hihyouji */
+.has-menu .sub-menu {
+  display: none;
+}
+
+/* ka-soru */
+.has-menu:hover .sub-menu {
+  display: block;
+}

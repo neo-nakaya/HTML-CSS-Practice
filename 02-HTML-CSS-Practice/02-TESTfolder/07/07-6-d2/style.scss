@@ -1,0 +1,11 @@
+@use "base/variables";
+@use "page/header";
+@use "page/footer";
+
+.button {
+  background: variables.$main-color;
+}
+
+.item {
+  background: variables.$bg-color;
+}
