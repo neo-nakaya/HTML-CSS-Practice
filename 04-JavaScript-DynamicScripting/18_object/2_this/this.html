@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>this</title>
+  </head>
+  <body>
+    <script>
+      const person1 = {
+        name: "クリス",
+        introduceSelf() {
+          console.log(`こんにちは、${this.name}です。`);
+        },
+      };
+
+      const person2 = {
+        name: "ディブティ",
+        introduceSelf() {
+          console.log(`こんにちは、${this.name}です。`);
+        },
+      };
+
+      person1.introduceSelf();
+      person2.introduceSelf();
+    </script>
+  </body>
+</html>

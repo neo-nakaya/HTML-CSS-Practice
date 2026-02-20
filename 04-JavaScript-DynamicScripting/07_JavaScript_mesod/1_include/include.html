@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>include</title>
+  </head>
+
+  <body>
+    <script>
+      const browserType = "mozilla";
+
+      console.log(browserType);
+
+      if (browserType.includes("zilla")) {
+        console.log("include: Found zilla");
+      } else {
+        console.log("include: No zilla here!");
+      }
+
+      if (browserType.startsWith("zilla")) {
+        console.log("startsWith: Found zilla");
+      } else {
+        console.log("startsWith: No zilla here!");
+      }
+
+      if (browserType.endsWith("zilla")) {
+        console.log("endsWith: Found zilla");
+      } else {
+        console.log("endsWith: No zilla here!");
+      }
+    </script>
+  </body>
+</html>

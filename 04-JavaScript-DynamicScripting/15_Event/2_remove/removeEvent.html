@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ボタン削除イベント</title>
+  </head>
+  <body>
+    <button>色を変更</button>
+    <div></div>
+    <script>
+      const btn = document.querySelector("button");
+      const para = document.querySelector("div");
+
+      function random(number) {
+        return Math.floor(Math.random() * (number + 1));
+      }
+
+      function changeBackground() {
+        const rndCol = `rgb(${random(255)} ${random(255)} ${random(255)})`;
+        document.body.style.backgroundColor = rndCol;
+      }
+
+      btn.addEventListener("click", changeBackground);
+
+      btn.removeEventListener("click", changeBackground);
+    </script>
+  </body>
+</html>

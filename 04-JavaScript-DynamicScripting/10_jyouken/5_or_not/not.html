@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>not</title>
+  </head>
+
+  <body>
+    <script>
+      const iceCreamVanOutside = [true, false];
+      const houseStatus = ["火事", "正常"];
+
+      //--- not ---
+      function orObject(ice, house) {
+        if (!(ice || house === "火事")) {
+          return "すぐに家から出ましょう。";
+        } else {
+          return "それでは家にいましょう。";
+        }
+      }
+
+      console.log(`条件式:  !( iceCreamVanOutside || houseStatus === "火事" )`);
+      // true, 火事
+      console.log(
+        ` true , 火事: ${orObject(iceCreamVanOutside[0], houseStatus[0])} `,
+      );
+
+      // false, 火事
+      console.log(
+        ` false, 火事: ${orObject(iceCreamVanOutside[1], houseStatus[0])} `,
+      );
+
+      // true, 正常
+      console.log(
+        ` true , 正常: ${orObject(iceCreamVanOutside[0], houseStatus[1])} `,
+      );
+
+      // false, 正常
+      console.log(
+        ` false, 正常: ${orObject(iceCreamVanOutside[1], houseStatus[1])} `,
+      );
+    </script>
+  </body>
+</html>

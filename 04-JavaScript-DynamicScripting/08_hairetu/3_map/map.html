@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>for_of</title>
+  </head>
+
+  <body>
+    <script>
+      function double(number) {
+        return number * 2;
+      }
+      const numbers = [5, 2, 7, 6];
+      const singled = double(numbers);
+      const singled2 = double(numbers[1]);
+      const doubled = numbers.map(double);
+
+      console.log(`double(numbers): ${singled}`);
+      console.log(`double(numbers[1]): ${singled2}`);
+      console.log(`numbers.map(double): ${doubled}`);
+      console.log(`numbers.map(double)の3番目: ${doubled[2]}`);
+    </script>
+  </body>
+</html>

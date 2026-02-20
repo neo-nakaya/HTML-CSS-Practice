@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>変数の例１</title>
+  </head>
+
+  <body>
+    <button id="button_A">押してください</button>
+    <h3 id="heading_A"></h3>
+
+    <script>
+      const buttonA = document.querySelector("#button_A");
+      const heading_A = document.querySelector("#heading_A");
+
+      let count = 1;
+
+      buttonA.onclick = () => {
+        buttonA.textContent = "もう一度！";
+        heading_A.textContent = `${count} 回クリックしました`;
+        count++;
+      };
+    </script>
+  </body>
+</html>

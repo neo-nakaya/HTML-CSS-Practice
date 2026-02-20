@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Function library example</title>
+    <style>
+      input {
+        font-size: 2em;
+        margin: 10px 1px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <input class="numberInput" type="text" />
+    <p></p>
+
+    <script>
+      const input = document.querySelector(".numberInput");
+      const para = document.querySelector("p");
+
+      function squared(num) {
+        return num * num;
+      }
+
+      function cubed(num) {
+        return num * num * num;
+      }
+
+      function factorial(num) {
+        if (num < 0) return undefined;
+        if (num === 0) return 1;
+        let x = num - 1;
+        while (x > 1) {
+          num *= x;
+          x--;
+        }
+        return num;
+      }
+
+      function root(num) {
+        return Math.sqrt(num);
+      }
+
+      function root3(num) {
+        return Math.cbrt(num);
+      }
+
+      function round(num) {
+        return 2 * num * Math.PI;
+      }
+
+      input.addEventListener("change", () => {
+        const num = parseFloat(input.value);
+        if (isNaN(num)) {
+          para.textContent = "数値を入力してください。";
+        } else {
+          para.textContent = ` ${num} の二乗は ${squared(num)} で、`;
+          para.textContent += ` ${num} の三乗は ${cubed(num)} で、`;
+          para.textContent += ` ${num} の階乗は ${factorial(num)} で、`;
+          para.textContent += ` ${num} の平方根は ${root(num)} で、`;
+          para.textContent += ` ${num} の立方根は ${root3(num)} で、`;
+          para.textContent += ` ${num} の円周は ${factorial(num)} で。。。`;
+        }
+      });
+    </script>
+  </body>
+</html>

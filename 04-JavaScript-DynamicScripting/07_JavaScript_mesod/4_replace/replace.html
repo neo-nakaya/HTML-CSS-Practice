@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>replace</title>
+  </head>
+
+  <body>
+    <script>
+      //例１: replace()
+      let browserType = "mozilla";
+      const updated = browserType.replace("moz", "van");
+
+      console.log(`例１元: ${browserType}`);
+      console.log(`例１変換後: ${updated}`);
+
+      //例１å：元の変数を更新したい場合
+      browserType = browserType.replace("moz", "van");
+
+      console.log(`例１元: ${browserType}`);
+
+      //例２: replaceAll()
+      const quote = "To be or not to be";
+      const quoteNor = quote.replace("be", "code");
+      const quoteAll = quote.replaceAll("be", "code");
+
+      console.log(`例２-replace: ${quoteNor}`);
+      console.log(`例２-replaceAll: ${quoteAll}`);
+    </script>
+  </body>
+</html>

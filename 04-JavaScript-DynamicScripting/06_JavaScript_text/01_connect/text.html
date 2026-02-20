@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>マシン起動確認</title>
+  </head>
+
+  <body>
+    <button>押してね</button>
+    <div id="greeting"></div>
+
+    <script>
+      const button = document.querySelector("button");
+      const newline = `One day you finally knew
+what you had to do, 
+and began.`;
+      const newlineNormal =
+        "One day you finally knew \n what you had to do, and began";
+
+      console.log(newline);
+      console.log(newlineNormal);
+
+      function greet() {
+        const name = prompt("What's your name?");
+        const greeting = document.querySelector("#greeting");
+        greeting.textContent = `${name} さん、こんにちは。はじめまして！`;
+      }
+
+      button.addEventListener("click", greet);
+    </script>
+  </body>
+</html>

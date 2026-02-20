@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>cheese</title>
+  </head>
+
+  <body>
+    <script>
+      let cheese = "チェダー";
+      let noChese = null;
+
+      console.log(`cheese: ${cheeseHere(cheese)}`);
+      console.log(`noCheese: ${cheeseHere(noChese)}`);
+
+      function cheeseHere(food) {
+        if (food) {
+          return "やったー！チーズトーストを作るチーズがあるよ！";
+        } else {
+          return "今日はチーズトーストのチーズがないよ！！！";
+        }
+      }
+    </script>
+  </body>
+</html>

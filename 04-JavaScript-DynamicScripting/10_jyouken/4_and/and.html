@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>and</title>
+  </head>
+
+  <body>
+    <label for="weather">今日の天気を選択してください: </label>
+    <select id="weather">
+      <option value="">--選択してください--</option>
+      <option value="sunny">晴れ</option>
+      <option value="rainy">雨</option>
+      <option value="snowing">雪</option>
+      <option value="overcast">雲</option>
+    </select>
+
+    <p></p>
+
+    <script>
+      const select = document.querySelector("select");
+      const para = document.querySelector("p");
+
+      //セレクトボタン選択時にsetWeather関数を実行
+      select.addEventListener("change", setWeather);
+
+      function setWeather() {
+        const choice = select.value;
+        const temperature = 0;
+
+        if (choice === "sunny" && temperature < 30) {
+          para.textContent = `外の気温は ${temperature} 度です - とてもいい天気です。海水浴や、公園に出かけてアイスクリームを食べましょう。`;
+        } else if (choice === "sunny" && temperature >= 30) {
+          para.textContent = `外の気温は ${temperature} 度です - かなり暑いです！外に出る時は、日焼け止めを塗りましょう。`;
+        }
+      }
+    </script>
+  </body>
+</html>

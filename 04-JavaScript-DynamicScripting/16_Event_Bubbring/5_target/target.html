@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>target</title>
+  </head>
+  <body>
+    <div id="container">
+      <button>ここをクリック</button>
+    </div>
+    <pre id="output"></pre>
+
+    <script>
+      const output = document.querySelector("#output");
+      function handleclick(e) {
+        const logTarget = `target: ${e.target.tagName}`;
+        const logCurrentTarget = `currentTarget: ${e.currentTarget.tagName}`;
+        output.textContent += `${logTarget}, ${logCurrentTarget}\n`;
+      }
+
+      const container = document.querySelector("#container");
+      const button = document.querySelector("button");
+
+      document.body.addEventListener("click", handleclick);
+      container.addEventListener("click", handleclick);
+      button.addEventListener("click", handleclick);
+    </script>
+  </body>
+</html>

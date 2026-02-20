@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>json</title>
+  </head>
+  <body>
+    <script>
+      fetch("superHeroes.json")
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error(`HTTP error: ${response.status}`);
+          }
+
+          return response.json();
+        })
+        .then((json) => initialize(json))
+        .catch((err) => console.error(`Fetch problem: ${err.message}`));
+
+      function initialize(hero) {
+        console.log(hero.homeTown);
+        console.log(hero["active"]);
+
+        //メンバーリストの2番目のヒーローの3番目の能力
+        console.log(hero["members"][1]["powers"][2]);
+      }
+    </script>
+  </body>
+</html>

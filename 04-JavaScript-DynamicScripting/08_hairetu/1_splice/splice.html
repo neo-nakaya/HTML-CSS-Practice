@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>splice</title>
+  </head>
+
+  <body>
+    <script>
+      const cities = ["東京", "大阪", "名古屋", "仙台", "札幌"];
+
+      //例１：大阪を切り抜く
+      let index = cities.indexOf("大阪");
+
+      if (index !== -1) {
+        //対象のアイテムを一つ取り出す
+        cities.splice(index, 1);
+      }
+      console.log(index);
+      console.log(cities); // [ "東京", "名古屋", "仙台", "札幌" ]
+
+      index = cities.indexOf("名古屋");
+
+      if (index !== -1) {
+        //対象のアイテムとその次のアイテムの2つを削除
+        //今回の場合："名古屋"と"仙台"
+        cities.splice(index, 2);
+      }
+      console.log(index);
+      console.log(cities); // [ "東京", "札幌" ]
+
+      cities.splice(0, 2); //splice(配列番号[], アイテムの個数)
+      console.log(cities); // [  ]
+    </script>
+  </body>
+</html>

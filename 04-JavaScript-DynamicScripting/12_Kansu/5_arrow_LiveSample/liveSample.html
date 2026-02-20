@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>returnの省略形</title>
+  </head>
+
+  <body>
+    <input id="textBox" type="text" />
+    <div id="output"></div>
+    <script>
+      const textBox = document.querySelector("#textBox");
+      const output = document.querySelector("#output");
+
+      textBox.addEventListener("keydown", (event) => {
+        output.textContent = `" ${event.key} "を推しました。`;
+      });
+    </script>
+  </body>
+</html>

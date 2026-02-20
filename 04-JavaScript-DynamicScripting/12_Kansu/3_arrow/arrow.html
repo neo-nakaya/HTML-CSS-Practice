@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>アロー関数</title>
+  </head>
+
+  <body>
+    <input type="text" />
+
+    <p></p>
+    <script>
+      const textBox = document.querySelector("input");
+
+      textBox.addEventListener("keydown", (event) => {
+        console.log(`" ${event.key}" を推しました。`);
+      });
+
+      //引数が一つしかない場合は「（）」を省略可
+      //ただし、VScodeの場合は仕様上、自動的に｀（）｀がつく
+      textBox.addEventListener("keydown", (event) => {
+        /* 処理文 */
+      });
+    </script>
+  </body>
+</html>

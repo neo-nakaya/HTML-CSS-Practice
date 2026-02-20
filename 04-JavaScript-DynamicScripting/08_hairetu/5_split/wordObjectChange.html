@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>split, join, toString</title>
+  </head>
+
+  <body>
+    <script>
+      const data = "札幌、仙台、東京、名古屋、大阪、福岡";
+
+      console.log(`文字列 → 配列`);
+      console.log(`1. split()`);
+      //[ 文字列 → 配列 ]
+      //split()を使用した変換
+      const cities = data.split("、");
+      console.log(cities);
+
+      console.log(cities.length);
+      console.log(cities[0]);
+      console.log(cities[1]);
+      console.log(cities[cities.length - 1]);
+
+      console.log(``);
+      console.log(`配列 → 文字列`);
+      console.log(`1. join()`);
+      //[ 配列 → 文字列 ]
+      //①join()を使用した変換
+      const commaSeparated = cities.join(",");
+      console.log(commaSeparated);
+
+      const commaSeparated2 = cities.join("と");
+      console.log(commaSeparated2);
+
+      console.log(``);
+      console.log(`2. toString()`);
+      console.log(cities.toString());
+    </script>
+  </body>
+</html>

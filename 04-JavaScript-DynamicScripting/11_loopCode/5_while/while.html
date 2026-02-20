@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>while文</title>
+  </head>
+
+  <body>
+    <script>
+      const cat = ["Pete", "Biggles", "Jasmine"];
+
+      let myFavoriteCats = "My cats are called ";
+
+      let i = 0; //nullの状態だとwhileの条件式が成り立たないため。
+
+      while (i < cat.length) {
+        if (i === cat.length - 1) {
+          myFavoriteCats += `and ${cat[i]}.`;
+        } else {
+          myFavoriteCats += `${cat[i]}, `;
+        }
+
+        i++;
+      }
+
+      console.log(myFavoriteCats);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>コンストラクター導入</title>
+  </head>
+  <body>
+    <script>
+      //
+      function createPerson(name) {
+        const obj = {};
+        obj.name = name;
+        obj.introduceSelf = function () {
+          console.log(`こんにちは、${this.name}です。`);
+        };
+        return obj;
+      }
+
+      const salve = createPerson("サルバ");
+      salve.introduceSelf();
+      // "こんにちは、サルバです。"
+
+      const frankie = createPerson("フランキー");
+      frankie.introduceSelf();
+      //"こんにちは、フランキーです。"
+
+      //コンストラクターを用いた場合
+      function person(name) {
+        this.name = name;
+        this.introduceSelf = function () {
+          console.log(`こんにちは、${this.name}です。`);
+        };
+      }
+
+      const salva = new person("サルバ");
+      salva.introduceSelf();
+    </script>
+  </body>
+</html>

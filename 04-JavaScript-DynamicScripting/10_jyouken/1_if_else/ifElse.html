@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>if A else B</title>
+  </head>
+
+  <body>
+    <script>
+      let shoppingDone = false;
+      let childAllowance;
+
+      //買い物を済ませたか？
+      if (shoppingDone === true) {
+        //真：お駄賃10円あげる
+        childAllowance = 10;
+      } else {
+        //偽：お駄賃5円あげる
+        childAllowance = 5;
+      }
+
+      console.log(childAllowance);
+    </script>
+  </body>
+</html>

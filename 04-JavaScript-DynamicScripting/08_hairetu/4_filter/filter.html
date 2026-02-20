@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>filter</title>
+  </head>
+
+  <body>
+    <script>
+      function isLong(city) {
+        return city.length > 2;
+      }
+
+      const cities = ["東京", "名古屋", "大阪", "鹿児島"];
+      const longerMap = cities.map(isLong);
+      const longerFilter = cities.filter(isLong);
+
+      console.log(`Map: ${longerMap}`);
+      console.log(`Filter: ${longerFilter}`);
+
+      console.log(longerMap);
+      console.log(longerFilter);
+    </script>
+  </body>
+</html>
